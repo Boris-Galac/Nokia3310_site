@@ -308,9 +308,7 @@ img {
     width: 50%;
   }
   .section-a i {
-    position: absolute;
-    bottom: 0;
-    left: 47%;
+    display: none;
   }
 
   /* section b */
