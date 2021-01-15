@@ -290,6 +290,9 @@ img {
 
 @media (max-width: 500px) {
   /* section a */
+  * {
+    overflow-x: hidden;
+  }
 
   .section-a .container {
     position: absolute;
