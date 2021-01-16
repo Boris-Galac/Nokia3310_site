@@ -440,9 +440,6 @@ td {
   .section-a .container div:first-child {
     order: 2;
   }
-  .section-a .container div:last-child {
-    order: -2;
-  }
   .section-a img {
     width: 50%;
   }
@@ -525,10 +522,12 @@ td {
 
   .section-a .container {
     position: absolute;
-    top: 60px;
+    top: 180px;
+   
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 0;
   }
   .section-a h2 {
     padding: 10px 0;
@@ -536,11 +535,13 @@ td {
   .section-a .container div:first-child {
     order: 2;
   }
-  .section-a .container div:last-child {
-    order: -2;
-  }
+}
   .section-a img {
-    width: 40%;
+    position: absolute;
+    width: 25%;
+    top: 85px;
+    left: 40%;
+
   }
   .section-a i {
     position: absolute;
