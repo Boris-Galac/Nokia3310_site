@@ -44,9 +44,17 @@ img {
   overflow: hidden;
   padding: 0 2rem;
 }
-
+.first-page {
+  height: 85vh;
+}
 /* --------------------HEADER-------------------- */
-
+.navbar {
+  background: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+}
 .navbar {
   font-size: 1.2rem;
   padding: 0.3rem 0;
@@ -85,6 +93,57 @@ img {
   color: rgb(15, 175, 15);
 }
 
+/* SOCIALS ICON-BAR --------------------------------*/
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
 /*-------------------- SHOWCASE -------------------- */
 
 .section-a {
@@ -114,7 +173,7 @@ img {
 .section-a i {
   display: flex;
   justify-content: center;
-  padding-top: 250px;
+  margin-top: 290px;
 }
 
 /* -------------------- OVERLAY SECTION--------------------*/
@@ -184,7 +243,7 @@ img {
 .section-c .gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 300px);
+
   gap: 2px;
 }
 .section-c .gallery a:first-child {
@@ -285,13 +344,87 @@ img {
   border-radius: 0 20px 20px 0;
 }
 
-/* Media Queries */
+/* -------------- SPECS PAGE ----------------------------- */
+#showcase .h1-box {
+  background: #374772cc;
+  margin-top: 3.5rem;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#showcase .h1 {
+  color: white;
+}
+
+#showcase {
+  height: 90.3vh;
+  background: rgb(231, 225, 225);
+}
+#showcase .about-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90%;
+  width: 95%;
+}
+.about-container .box-img {
+  width: 25%;
+}
+
+table {
+  width: 35%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.096);
+}
+table,
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.096);
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.171);
+  text-align: center;
+}
+.td-style {
+  font-weight: 700;
+}
+.heading1 {
+  color: red;
+  font-weight: 700;
+}
+
+/* ------MEDIA QUERIES -------------------------------*/
 /* Iphone X */
 
 @media (max-width: 500px) {
   /* section a */
   * {
     overflow-x: hidden;
+  }
+  .first-page {
+    height: 100vh;
+  }
+  .icon-bar a {
+    color: rgb(255, 255, 255);
+    padding: 0;
+  }
+  .facebook {
+    background: none;
+  }
+
+  .twitter {
+    background: none;
+  }
+
+  .google {
+    background: none;
+  }
+
+  .linkedin {
+    background: none;
+  }
+
+  .youtube {
+    background: none;
   }
 
   .section-a .container {
@@ -300,6 +433,9 @@ img {
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  .section-a h2 {
+    padding: 0.5rem 0;
   }
   .section-a .container div:first-child {
     order: 2;
@@ -317,11 +453,10 @@ img {
   /* section b */
 
   .section-b-inner {
-    padding: 1rem;
+    padding: 3em;
   }
   .section-b-inner h2 {
-    font-size: 3.5rem;
-    padding: 0 2rem;
+    font-size: 2.5rem;
   }
   .section-b-inner h3 {
     font-size: 1.5rem;
@@ -344,5 +479,32 @@ img {
   }
   .copy {
     font-size: 0.8rem;
+  }
+
+  /* SPECS PAGE */
+  .h1-box {
+    position: absolute;
+    top: 60px;
+  }
+  table {
+    margin: 1rem 0;
+  }
+  .box-img {
+    margin-top: 10rem;
+  }
+  .spec-img {
+    width: 100%;
+  }
+  #showcase {
+    height: 100%;
+  }
+  #showcase .h1-box {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  #showcase .about-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 }
