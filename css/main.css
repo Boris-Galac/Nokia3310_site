@@ -1,103 +1,159 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
-:root {
-  --primatry-color: #333;
+root {
+  --primary-color: #333;
   --secondary-color: #444;
-  --overlay-color: rgba(14, 39, 8, 0.678);
+  --overlay-color: rgba(0, 0, 0, 0.7);
 }
+
 * {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
-  line-height: 1.6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.1rem;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     151deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(225, 245, 252, 1) 100%
+    rgb(218, 243, 252) 100%
   );
+  overflow-x: hidden;
 }
+
 h1,
 h2,
 h3,
 h4 {
   line-height: 1.3;
 }
+
 a {
-  color: var(--secondary-color);
+  color: #444;
   text-decoration: none;
 }
+
 ul {
   list-style: none;
 }
+
 img {
   width: 100%;
 }
+.btn {
+  display: inline-block;
+  background: #374772;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background: #374772a1;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0b471d9d;
+}
+
 .container {
   max-width: 1100px;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
 }
-.first-page {
-  height: 85vh;
+
+#logo {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
 }
-/* --------------------HEADER-------------------- */
-.navbar {
-  background: rgb(255, 255, 255);
-  position: fixed;
-  top: 0;
-  z-index: 500;
-  width: 100%;
+#logo img {
+  width: 10%;
 }
+
+/* NAVBAR --------------------------------*/
+
 .navbar {
+  font-weight: 600;
   font-size: 1.2rem;
-  padding: 0.3rem 0;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
+
 .navbar .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
 }
-#logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+
+.navbar #logo {
   position: relative;
   right: 18px;
 }
-#logo h1 {
-  font-family: "Press Start 2P", cursive;
-  font-size: 20px;
-  display: flex;
-}
-#logo img {
-  width: 60px;
-  height: 50px;
-}
-.navbar .nav {
-  display: flex;
+
+.navbar ul {
   justify-self: flex-end;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-.navbar .nav a {
+
+.navbar a {
   padding: 0 1rem;
-  font-weight: 500;
 }
-.navbar .nav a:hover {
-  color: rgb(15, 175, 15);
+
+.navbar a:hover {
+  color: #555;
+}
+/* ----------------------- SECTION - A -------------------- */
+.section-a {
+  margin: 12rem 0;
+  height: 55vh;
+}
+
+.section-a .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-a h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-family: "Press Start 2P", cursive;
+}
+
+.section-a p {
+  margin: 1rem 0;
+}
+.section-a i {
+  position: absolute;
+  left: 47%;
+  bottom: 0;
 }
 
 /* SOCIALS ICON-BAR --------------------------------*/
 
 .icon-bar {
   position: fixed;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
   z-index: 1000;
 }
@@ -143,175 +199,112 @@ img {
   margin-left: 75px;
   font-size: 30px;
 }
-
-/*-------------------- SHOWCASE -------------------- */
-
-.section-a {
-  height: 60vh;
-  margin: 10rem 0;
-}
-.section-a h1 {
-  font-family: "Press Start 2P";
-  font-size: 3rem;
-  color: var(--primatry-color);
-}
-.section-a h2 {
-  font-size: 2rem;
-  color: var(--primatry-color);
-  font-weight: 500;
-}
-.section-a .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  align-items: center;
-  justify-content: center;
-}
-.section-a p {
-  margin: 1rem 0;
-}
-.section-a i {
-  display: flex;
-  justify-content: center;
-  margin-top: 290px;
-}
-
-/* -------------------- OVERLAY SECTION--------------------*/
-
+/* ------------------ SECTION - B --------------------- */
 .section-b {
   position: relative;
-  background: url(/img/display.jpg) no-repeat center center/cover;
+  background: url("/img/display.jpg") no-repeat bottom center/cover;
   height: 600px;
 }
+
 .section-b-inner {
+  color: #fff;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  height: 100%;
   text-align: center;
   margin: auto;
   max-width: 860px;
   padding: 5rem 0;
 }
-.section-b-inner h2 {
-  font-size: 3.4rem;
-  padding-bottom: 0.5rem;
-  font-weight: 500;
-}
+
 .section-b-inner h3 {
-  font-size: 25px;
+  font-size: 2rem;
 }
 
-/* -------------------- utilities--------------------*/
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--overlay-color);
+.section-b-inner h2 {
+  font-size: 5rem;
+  margin-top: 1rem;
 }
 
-.btn {
-  margin-top: 0.8rem;
-  display: inline-block;
-  background: #374772;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 30px;
-}
-.btn:hover {
-  background: #374772cc;
+.section-b-inner p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
-/* -------------------- GALLERY --------------------*/
-
+/* ------------------ SECTION - C --------------------- */
 .section-c {
-  background: #000;
-}
-
-.section-c .gallery img,
-.section-c .galery a {
-  width: 100%;
-  height: 100%;
 }
 .section-c .gallery {
   display: grid;
+  gap: 0.3rem;
+  background: #000;
   grid-template-columns: repeat(5, 1fr);
-
-  gap: 2px;
 }
 .section-c .gallery a:first-child {
-  grid-row: 1 / 3;
-  grid-column: 1 / 3;
-}
-.section-c .gallery a:nth-child(3) {
-  grid-column: 5;
   grid-row: 1/3;
-  width: 400px;
-}
-.section-c .gallery a:last-child {
-  grid-row: 1;
-  grid-column: 4;
+  grid-column: 1/3;
 }
 
-/* -------------------- FOOTER --------------------*/
+.section-c .gallery a:nth-child(2) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.section-c .gallery img,
+.section-c .gallery a {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------ FOOTER --------------------- */
 
 .section-footer {
-  background: var(--primatry-color);
-  color: white;
+  background: #333;
+  color: #fff;
   padding: 4rem 0;
 }
+
 .section-footer .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-gap: 1rem;
 }
 
 .section-footer h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .section-footer h3 {
   margin-bottom: 0.7rem;
 }
+
 .section-footer a {
   line-height: 1.9;
   color: #ccc;
 }
+
 .section-footer a > i {
   color: #555;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  transition: all 0.4s ease;
 }
 .section-footer a > i:hover {
   color: rgb(255, 255, 255);
 }
-.copy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  background: rgb(177, 66, 66);
-  padding: 5px 0;
-}
-
-/* FOOTER-FORM */
 
 .email-form {
   width: 100%;
   display: inline-block;
-  background: #555;
+  background-color: #555;
   position: relative;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px;
   line-height: 0;
   margin-top: 1rem;
 }
+
 .email-form .form-control {
   display: inline-block;
   border: 0;
@@ -319,12 +312,14 @@ img {
   font-size: 1rem;
   color: #ddd;
   background-color: transparent;
+  font-family: inherit;
   margin: 0;
   padding: 0 3rem 0 1.5rem;
   width: 100%;
   height: 45px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px;
 }
+
 .email-form .submit {
   display: inline-block;
   position: absolute;
@@ -343,54 +338,17 @@ img {
   cursor: pointer;
   border-radius: 0 20px 20px 0;
 }
-
-/* -------------- SPECS PAGE ----------------------------- */
-#showcase .h1-box {
-  background: #374772cc;
-  margin-top: 3.5rem;
-  height: 10%;
+.copy {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#showcase .h1 {
-  color: white;
-}
-
-#showcase {
-  height: 90.3vh;
-  background: rgb(231, 225, 225);
-}
-#showcase .about-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 90%;
-  width: 95%;
-}
-.about-container .box-img {
-  width: 25%;
-}
-
-table {
-  width: 35%;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.096);
-}
-table,
-th,
-td {
-  border: 1px solid rgba(0, 0, 0, 0.096);
-  border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.171);
   text-align: center;
+  color: white;
+  background: rgb(177, 66, 66);
+  padding: 5px 0;
 }
-.td-style {
-  font-weight: 700;
-}
-.heading1 {
-  color: red;
-  font-weight: 700;
-}
+
+/* ------------------ RESPONSIVE --------------------- */
 
 /* ------MEDIA QUERIES -------------------------------*/
 /* Iphone X */
@@ -510,6 +468,9 @@ td {
 /* Samsung S5 */
 
 @media (max-width: 360px) and (max-height: 640px) {
+  #logo img {
+    width: 40px;
+  }
   .icon-bar {
     display: none;
   }
@@ -522,8 +483,7 @@ td {
 
   .section-a .container {
     position: absolute;
-    top: 180px;
-   
+    top: 150px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -535,18 +495,9 @@ td {
   .section-a .container div:first-child {
     order: 2;
   }
-}
-  .section-a img {
-    position: absolute;
-    width: 25%;
-    top: 85px;
-    left: 40%;
 
-  }
-  .section-a i {
-    position: absolute;
-    bottom: 0;
-    left: 48%;
+  .section-a img {
+    display: none;
   }
 
   /* section b */
