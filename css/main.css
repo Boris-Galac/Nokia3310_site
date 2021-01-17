@@ -145,7 +145,7 @@ img {
 }
 .section-a i {
   position: absolute;
-  left: 47%;
+  left: 48%;
   bottom: 0;
 }
 
@@ -204,19 +204,19 @@ img {
   position: relative;
   background: url("/img/display.jpg") no-repeat bottom center/cover;
   height: 600px;
-}
-
-.section-b-inner {
-  color: #fff;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: auto;
+}
+
+.section-b-inner {
+  color: #fff;
+  height: 100%;
+  margin: 0 auto;
   max-width: 860px;
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 
 .section-b-inner h3 {
@@ -224,13 +224,12 @@ img {
 }
 
 .section-b-inner h2 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin-top: 1rem;
 }
 
 .section-b-inner p {
   margin-top: 1rem;
-  font-size: 1.5rem;
 }
 
 /* ------------------ SECTION - C --------------------- */
@@ -346,6 +345,54 @@ img {
   color: white;
   background: rgb(177, 66, 66);
   padding: 5px 0;
+}
+
+/* -------------- SPECS PAGE ----------------------------- */
+#showcase .h1-box {
+  background: #374772cc;
+  /* margin-top: 1rem; */
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#showcase .h1 {
+  color: white;
+}
+
+#showcase {
+  height: 89.8vh;
+  background: rgb(231, 225, 225);
+}
+#showcase .about-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90%;
+  width: 95%;
+}
+.about-container .box-img {
+  width: 25%;
+}
+
+table {
+  width: 35%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.096);
+}
+table,
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.096);
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.171);
+  text-align: center;
+}
+.td-style {
+  font-weight: 700;
+}
+.heading1 {
+  color: red;
+  font-weight: 700;
 }
 
 /* ------------------ RESPONSIVE --------------------- */
@@ -477,20 +524,16 @@ img {
   * {
     overflow-x: hidden;
   }
-  .first-page {
-    height: 100vh;
-  }
 
   .section-a .container {
     position: absolute;
-    top: 150px;
+    top: 120px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0;
   }
   .section-a h2 {
-    padding: 10px 0;
+    padding: 20px 0;
   }
   .section-a .container div:first-child {
     order: 2;
@@ -506,7 +549,7 @@ img {
     padding: 3em;
   }
   .section-b-inner h2 {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
   .section-b-inner h3 {
     font-size: 1.5rem;
@@ -540,13 +583,11 @@ img {
     font-size: 1.2rem;
   }
   table {
-    margin: 1rem 0;
+    margin: 5rem 0;
   }
-  .box-img {
-    margin-top: 10rem;
-  }
+
   .spec-img {
-    width: 100%;
+    display: none;
   }
   #showcase {
     height: 100%;
