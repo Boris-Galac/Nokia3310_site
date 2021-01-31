@@ -233,8 +233,7 @@ img {
 }
 
 /* ------------------ SECTION - C --------------------- */
-.section-c {
-}
+
 .section-c .gallery {
   display: grid;
   gap: 0.3rem;
@@ -401,6 +400,10 @@ td {
 /* Iphone X */
 
 @media (min-width: 375px) and (max-height: 812px) {
+  .navbar {
+    padding: 1em 0;
+  }
+
   /* section a */
   * {
     overflow-x: hidden;
@@ -493,10 +496,10 @@ td {
     margin: 1rem 0;
   }
   .box-img {
-    margin-top: 10rem;
+    margin-top: 7rem;
   }
   .spec-img {
-    width: 100%;
+    display: none;
   }
   #showcase {
     height: 100%;
@@ -586,6 +589,123 @@ td {
     margin: 5rem 0;
   }
 
+  .spec-img {
+    display: none;
+  }
+  #showcase {
+    height: 100%;
+  }
+  #showcase .h1-box {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  #showcase .about-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* samsung s20 */
+@media (max-width: 360px) and (max-height: 800px) {
+  .navbar {
+    padding: 1em 0;
+  }
+
+  /* section a */
+  * {
+    overflow-x: hidden;
+  }
+  .first-page {
+    height: 100vh;
+  }
+  .icon-bar a {
+    color: rgb(255, 255, 255);
+    padding: 0;
+  }
+  .facebook {
+    background: none;
+  }
+
+  .twitter {
+    background: none;
+  }
+
+  .google {
+    background: none;
+  }
+
+  .linkedin {
+    background: none;
+  }
+
+  .youtube {
+    background: none;
+  }
+
+  .section-a .container {
+    position: absolute;
+    top: 140px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-a h2 {
+    padding: 0.5rem 0;
+  }
+  .section-a .container div:first-child {
+    order: 2;
+  }
+  .section-a img {
+    width: 50%;
+  }
+  .section-a i {
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+  }
+
+  /* section b */
+
+  .section-b-inner {
+    padding: 3em;
+  }
+  .section-b-inner h2 {
+    font-size: 2.5rem;
+  }
+  .section-b-inner h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  /* section-c */
+
+  .section-c .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* section footer */
+
+  .section-footer .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .copy {
+    font-size: 0.8rem;
+  }
+
+  /* SPECS PAGE */
+  .h1-box {
+    position: absolute;
+  }
+  table {
+    margin: 1rem 0;
+  }
+  .box-img {
+    margin-top: 7rem;
+  }
   .spec-img {
     display: none;
   }
